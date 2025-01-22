@@ -11,7 +11,8 @@ class Project extends Model
     /** @use HasFactory<\Database\Factories\ProjectFactory> */
     use HasFactory;
 
-    public function casts() {
+    public function casts()
+    {
         return [
             'tech_stack' => 'array',
             'status' => ProjectStatus::class,
@@ -19,7 +20,13 @@ class Project extends Model
         ];
     }
 
-    public function author() {
+    public function author()
+    {
         return $this->belongsTo(User::class, 'created_by');
+    }
+
+    public function proposals()
+    {
+        return $this->hasMany(Proposal::class);
     }
 }
