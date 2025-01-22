@@ -18,4 +18,8 @@ class Project extends Model
             'ends_at' => 'datetime'
         ];
     }
+
+    public function author() {
+        return $this->belongsTo(User::class, 'created_by');
+    }
 }
