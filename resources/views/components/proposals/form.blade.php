@@ -10,19 +10,19 @@
                 <input wire:model="email" type="email" class="w-full bg-[#1E1E2C] text-white p-2 focus:outline-none focus:ring-0 border border-[#1E1E2C]" placeholder="Insira o seu e-mail" />
 
                 @error('email')
-                    <div class="text-red-600 text-sm mt-1">{{ $message }}</div>
+                <div class="text-red-600 text-sm mt-1">{{ $message }}</div>
                 @enderror
             </div>
             <div class="w-1/3 gap-2 flex flex-col">
                 <label class="text-[14px] text-[#C3C3D1]">Horas</label>
                 <div class="flex" x-data="{ hours: @entangle('hours') }">
-                    <button type="button" class="bg-[#1E1E2C] hover:bg-[#313145] transition duration-300 ease-in-out text-[#C3C3D1] py-2 px-3 text-3xl" @click="hours--">-</button>
-                    <input wire:model="hours" type="number" class="bg-[#1E1E2C] text-white py-2 pl-3 w-[40px] font-bold focus:outline-none focus:ring-0 border border-[#1E1E2C] focus:ring-blue-500" />
-                    <button type="button" class="bg-[#1E1E2C] hover:bg-[#313145] transition duration-300 ease-in-out text-[#C3C3D1] py-2 px-3 text-3xl" @click="hours++">+</button>
+                    <button type="button" class="bg-[#1E1E2C] hover:bg-[#313145] transition duration-300 ease-in-out text-[#C3C3D1] pb-[6px] px-3 text-3xl" @click="hours = Math.max(0, hours - 1); hours = String(hours).padStart(2, '0')">-</button>
+                    <input wire:model="hours" type="number" class="bg-[#1E1E2C] text-white py-[3px] pl-[0.65rem] w-[40px] font-bold focus:outline-none focus:ring-0 border border-[#1E1E2C] focus:ring-blue-500" x-bind:value="String(hours).padStart(2, '0')" @input="hours = $event.target.value.padStart(2, '0')" />
+                    <button type="button" class="bg-[#1E1E2C] hover:bg-[#313145] transition duration-300 ease-in-out text-[#C3C3D1] pb-[6px] px-3 text-3xl" @click="hours++; hours = String(hours).padStart(2, '0')">+</button>
                 </div>
 
                 @error('hours')
-                    <div class="text-red-600 text-sm mt-1">{{ $message }}</div>
+                <div class="text-red-600 text-sm mt-1">{{ $message }}</div>
                 @enderror
             </div>
         </div>
