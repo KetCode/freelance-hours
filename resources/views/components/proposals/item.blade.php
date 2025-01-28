@@ -5,7 +5,7 @@
 <div class="flex justify-between items-center max-lg:grid max-lg:grid-rows-2 max-lg:items-end">
     <div class="flex items-center space-x-2">
         <div>
-            <x-proposals.position :$position />
+            <x-proposals.position :$position :status="$proposal->position_status" />
         </div>
         <div>
             <div class="text-white text-[14px] font-bold tracking-wide truncate max-w-[140px] max-[1110px]:w-[100px]">
