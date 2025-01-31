@@ -8,3 +8,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [ProjectsController::class, 'index'])->name('projects.index');
 Route::get('/project/{project}', [ProjectsController::class, 'show'])->name('projects.show');
 Route::get('/project', [ProjectsController::class, 'create'])->name('projects.create');
+Route::get('/about', [ProjectsController::class, 'about'])->name('projects.about');
