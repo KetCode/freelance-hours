@@ -38,8 +38,13 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [x] Atualizar lista de propostas
 - [x] Receber email para criação da proposta
 - [x] Organizar as propostas de acordo com a quantidade de horas classificado em tier
-- [ ] Tela para anunciar novo projeto
-- [ ] Tela como funciona
+- [x] Tela para anunciar novo projeto
+- [x] Tela como funciona
+- [x] Funcionamento do botão para anunciar novo projeto
+- [ ] Dropdown com todas as tecnologias quando for digitar
+- [ ] Icons novos das outras tecnologias
+- [ ] Tela de cadastro do usuário
+- [ ] Tela de login e autenticação
 
 ### 📜 Licença
 
