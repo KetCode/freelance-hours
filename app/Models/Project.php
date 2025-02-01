@@ -11,6 +11,14 @@ class Project extends Model
     /** @use HasFactory<\Database\Factories\ProjectFactory> */
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'ends_at',
+        'description',
+        'tech_stack',
+        'created_by',
+    ];
+
     public function casts()
     {
         return [
