@@ -11,7 +11,7 @@
 
             <div>
                 <div class="text-[#8C8C9A] text-[14px] leading-6">
-                    Publicado {{ $project->created_at->diffForHumans() }}
+                    {{ $project->created_at->diffForHumans() }}
                 </div>
             </div>
         </div>

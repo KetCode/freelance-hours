@@ -5,7 +5,7 @@
                 Propostas
             </h2>
             <div class="text-[#8C8C9A] text-[12px]">
-                Publicado {{ $this->lastProposalTime }}
+                {{ $this->lastProposalTime }}
             </div>
         </div>
         <div class="flex items-center space-x-2">
